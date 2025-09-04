@@ -1,0 +1,526 @@
+style.css
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9fbfd;
+  color: #222;
+}
+
+header .top-bar {
+  background: #f8fafc;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+header .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 12px 24px;
+}
+
+header .logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #346aff;
+}
+
+header nav a {
+  margin: 0 12px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .search-cart {
+  display: flex;
+  align-items: center;
+}
+
+header .search-cart input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  margin-right: 8px;
+}
+
+.cart-btn {
+  background: #346aff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hero section */
+/* .hero {
+  display: flex;
+  flex-wrap: wrap;
+  background: #e9f6ff;
+  padding: 36px 24px;
+}
+.hero-main {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+.hero-main .left {
+  flex: 1;
+  padding-right: 36px;
+}
+.hero-main h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.hero-main h2 span {
+  font-size: 1.6em;
+  color: #346aff;
+}
+.hero-main p {
+  margin: 18px 0 18px 0;
+  color: #888;
+}
+.hero-main button {
+  background: #346aff;
+  color: #fff;
+  border: none;
+  padding: 14px 38px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+.hero-main .discount {
+  position: absolute;
+  background: #ffd028;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 50%;
+  font-size: 1em;
+  top: 48px;
+  left: 320px;
+}
+.hero-main .right img {
+  height: 200px;
+}
+.hero-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.hero-side .card {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(52,106,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-side .card h3 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 600;
+}
+.hero-side .card img {
+  height: 50px;
+}
+.hero-side .card a {
+  color: #346aff;
+  font-size: 0.95em;
+  text-decoration: none;
+  font-weight: bold;
+} */
+
+/* Hero section */
+.hero {
+  display: flex;
+  background: white;
+  padding: 36px 50px;
+  gap: 24px; /* Gap between main and side */
+  height:400px
+}
+
+/* Hero Main (Left Section) */
+.hero-main {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  background: url("https://picsum.photos/seed/hair/800/600") no-repeat center/cover;
+  position: relative;
+  color: #fff;
+  padding:10%;
+  background-color:blue;
+  
+}
+
+.hero-main .left {
+  flex: 1;
+  padding: 36px;
+  z-index: 2;
+
+  display: flex;            /* Enables flex layout */
+  flex-direction: column;   /* Stack elements vertically */
+  justify-content: flex-start; /* Aligns content to the top */
+  align-items: flex-start;  /* Aligns content to the left */
+}
+
+.hero-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Overlay for text visibility */
+}
+
+.hero-main h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.hero-main h2 span {
+  font-size: 1.6em;
+  color: #ffd028;
+}
+
+.hero-main p {
+  margin: 18px 0;
+  color: #eee;
+}
+
+.hero-main button {
+  background: #5ab4f8; /* Light blue */
+  color: #fff; /* White text */
+  border: none;
+  padding: 14px 38px;
+  font-size: 1.1em;
+   border-radius: 30px; /* Removed rounded corners */
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.hero-main .discount {
+  position: absolute;
+  background: #ffd028;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 1em;
+  top: 48px;
+  left: 280px;
+  z-index: 3;
+  border-radius: 0; /* Removed rounded */
+}
+
+/* Hero Side (Right Section) */
+.hero-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+   /* More gap between cards */
+   
+}
+
+.hero-side .card {
+  background: url("https://picsum.photos/seed/lotion/400/200") no-repeat center/cover;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(52,106,255,0.05);
+  position: relative;
+  color: #fff;
+  border-radius: 0; /* No rounded corners */
+  height: 200%;
+}
+
+.hero-side .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-side .card h3,
+.hero-side .card a {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling the headings */
+.hero-side .card h3 {
+  font-size: 18px;      /* First line size */
+  font-weight: 400;     /* Normal for first line */
+  color: black;         /* Black font */
+  line-height: 1.4;     /* Gap between lines */
+  margin: 0;
+}
+
+/* Make second line bigger and bolder */
+.hero-side .card h3 span {
+  display: block;       /* Moves to new line */
+  font-size: 24px;      /* Bigger font */
+  font-weight: 700;     /* Bold */
+  margin-top: 5px;      /* Gap between first and second line */
+  color: black;         /* Black font */
+}
+
+/* Shop Now link */
+.hero-side .card a {
+  color: #d62828; /* Good red shade */
+  font-size: 0.95em;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+
+
+/* Responsive fix */
+
+
+
+/* Covid19 products */
+.covid-products {
+  display: flex;
+  gap: 40px; /* Gap between cards */
+  padding: 36px 50px; /* Updated padding */
+}
+
+.covid-card {
+  flex: 1; /* All cards share equal width */
+  height: 400px; /* Equal height for all */
+  background: #fff;
+  
+  box-shadow: 0 2px 8px rgba(52,106,255,0.07);
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+}
+
+.covid-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #346aff;
+  margin-bottom: 10px;
+}
+
+.covid-card img {
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #ffd028;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(52,106,255,0.07);
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 8px 15px;
+}
+
+.covid-card a {
+  display: block;
+  margin-top: 16px;
+  color: #346aff;
+  font-weight: bold;
+}
+
+
+/* Featured Products */
+.featured-products {
+  padding: 36px 24px 18px 24px;
+  background: #f2f8ff;
+}
+.featured-products h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #222;
+}
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+.product {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(52,106,255,0.05);
+  position: relative;
+}
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e12424;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.82em;
+  font-weight: bold;
+}
+.product img {
+  height: 70px;
+  margin-bottom: 10px;
+}
+.product h4 {
+  margin: 6px 0 4px 0;
+  font-size: 1em;
+  color: #346aff;
+}
+.product p {
+  margin: 0;
+}
+.old-price {
+  text-decoration: line-through;
+  font-size: 0.95em;
+  color: #e12424;
+  margin-right: 6px;
+}
+.price {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Deal of the week */
+.deal-week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e3eefc;
+  padding: 32px 24px;
+  margin-top: 12px;
+}
+.deal-details {
+  max-width: 48%;
+}
+.deal-details h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.3em;
+}
+.deal-details h3 {
+  font-size: 1.7em;
+  color: #346aff;
+  margin: 0 0 18px 0;
+}
+.deal-details .deal-price {
+  color: #e12424;
+  font-size: 1.4em;
+  margin-bottom: 18px;
+}
+.deal-details button {
+  background: #346aff;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.countdown {
+  display: flex;
+  gap: 12px;
+}
+.countdown div {
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+.countdown span {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.countdown small {
+  display: block;
+  font-size: 0.7em;
+  color: #999;
+  margin-top: 2px;
+}
+.deal-week img {
+  height: 120px;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f7fbff;
+  padding: 34px 24px;
+  text-align: center;
+}
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 18px;
+}
+.testimonial {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(52,106,255,0.07);
+  max-width: 300px;
+  padding: 22px 18px;
+  text-align: left;
+}
+.stars {
+  color: #FFD028;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.testimonial p {
+  font-size: 0.99em;
+  color: #333;
+  margin-bottom: 16px;
+}
+.user {
+  font-weight: bold;
+  color: #346aff;
+}
+.role {
+  color: #b56f18;
+  margin-left: 6px;
+  font-size: 0.98em;
+}
+
+/* Footer */
+footer {
+  background: #346aff;
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero, .covid-products, .deal-week, .testimonial-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-header, .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .featured-products .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+

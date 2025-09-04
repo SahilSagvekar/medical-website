@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Store – Products</title>
+  <meta name="description" content="Your trusted neighborhood medical store. Genuine medicines, wellness essentials, and fast delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Poppins", "ui-sans-serif", "system-ui"] },
+          colors: {
+            brand: {
+              50: '#effaf6', 100: '#d8f3ea', 200: '#b0e7d5', 300: '#82d7bd', 400: '#4fc4a2', 500: '#2bb38f', 600: '#1f9276', 700: '#1c7561', 800: '#1a5d4f', 900: '#164b42'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Top Bar -->
+  <div class="bg-brand-700 text-white text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+      <p>Open today: 9:00 AM – 10:00 PM</p>
+      <a href="tel:+91XXXXXXXXXX" class="underline underline-offset-4 hover:no-underline">Call: +91 XXXXXXXXXX</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center gap-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="size-10 rounded-xl bg-brand-600 grid place-items-center text-white font-bold">MS</div>
+        <div>
+          <div class="text-lg font-semibold">MedSecure Pharmacy</div>
+          <div class="text-xs text-gray-500">Genuine • Affordable • Nearby</div>
+        </div>
+      </a>
+      <nav class="ml-auto hidden md:flex items-center gap-6 text-sm">
+        <a href="#products" class="hover:text-brand-700">Products</a>
+        <a href="#about" class="hover:text-brand-700">About</a>
+        <a href="#contact" class="hover:text-brand-700">Contact</a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order" class="inline-flex items-center bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl">Order on WhatsApp</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden ml-auto p-2 rounded-lg border border-gray-200" aria-label="Open menu">☰</button>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 flex flex-col gap-3 bg-white">
+        <a href="#products" class="hover:text-brand-700">Products</a>
+        <a href="#about" class="hover:text-brand-700">About</a>
+        <a href="#contact" class="hover:text-brand-700">Contact</a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl">Order on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-br from-brand-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 items-center gap-8">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold leading-tight">All your medicines & wellness essentials in one place</h1>
+        <p class="mt-3 text-gray-600">Browse our catalogue and order instantly on WhatsApp. 100% genuine products.</p>
+        <div class="mt-5 flex gap-3">
+          <a href="#products" class="px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium">Browse Products</a>
+          <a href="https://maps.google.com" class="px-5 py-3 rounded-xl border border-gray-300 hover:border-gray-400">Get Directions</a>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white shadow p-4">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1400&auto=format&fit=crop" alt="Medical store" class="rounded-xl w-full h-64 object-cover"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters & Search -->
+  <section id="products" class="max-w-6xl mx-auto px-4 pb-6">
+    <div class="bg-white rounded-2xl shadow p-4 md:p-5 -mt-8 relative z-10">
+      <div class="flex flex-col md:flex-row gap-3 md:items-center">
+        <div class="flex-1">
+          <label for="search" class="sr-only">Search products</label>
+          <input id="search" type="text" placeholder="Search by name..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-500" />
+        </div>
+        <div class="grid grid-cols-2 sm:flex gap-2">
+          <select id="category" class="px-3 py-3 rounded-xl border border-gray-200">
+            <option value="all">All categories</option>
+            <option value="medicine">Medicine</option>
+            <option value="wellness">Wellness</option>
+            <option value="baby">Baby Care</option>
+            <option value="devices">Devices</option>
+          </select>
+          <select id="sort" class="px-3 py-3 rounded-xl border border-gray-200">
+            <option value="relevance">Sort: Relevance</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <div id="grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    <div id="empty" class="hidden text-center text-gray-600 mt-8">No products found. Try adjusting your filters.</div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-semibold">About MedSecure Pharmacy</h2>
+        <p class="mt-3 text-gray-600">We are a trusted pharmacy committed to quality and affordability. Licensed, GST-compliant, and serving the neighborhood with fast home delivery.</p>
+        <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+          <li>100% genuine, sealed products</li>
+          <li>Prescription verification for scheduled drugs</li>
+          <li>Free delivery on orders over ₹499*</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-brand-50 p-6">
+        <h3 class="font-medium">Accepted Payments</h3>
+        <p class="text-gray-600 mt-2">UPI, Cards, Cash on Delivery</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-2xl font-semibold">Contact & Location</h2>
+        <p class="mt-3 text-gray-600">123, Main Road, Near City Hospital, Mumbai 400001</p>
+        <div class="mt-4 space-y-2">
+          <a class="block" href="tel:+91XXXXXXXXXX">📞 +91 XXXXXXXXXX</a>
+          <a class="block" href="mailto:hello@medsecure.in">✉️ hello@medsecure.in</a>
+          <a class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20want%20to%20order">Order on WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <iframe title="Map" class="w-full h-64 rounded-2xl border" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2sin!4v0000000000000"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-600 flex flex-col md:flex-row gap-3 md:items-center justify-between">
+      <p>© <span id="year"></span> MedSecure Pharmacy. All rights reserved.</p>
+      <p>GSTIN: XXYYYYZZZZZ1Z1 • Licence: 1234-AB-5678</p>
+    </div>
+  </footer>
+
+  <template id="cardTpl">
+    <div class="group bg-white rounded-2xl border shadow-sm overflow-hidden flex flex-col">
+      <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+        <img class="w-full h-full object-cover transition duration-300 group-hover:scale-105" alt="" />
+      </div>
+      <div class="p-4 flex flex-col gap-2">
+        <h3 class="font-medium leading-snug"></h3>
+        <p class="text-sm text-gray-600"></p>
+        <div class="mt-1 flex items-center justify-between">
+          <span class="font-semibold"></span>
+          <a target="_blank" class="px-3 py-2 text-sm rounded-xl bg-brand-600 hover:bg-brand-700 text-white">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    const PRODUCTS = [
+      { id: 1, name: 'Paracetamol 500mg (10 tabs)', price: 30, category: 'medicine', mrp: 35, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop', note: 'Pain & fever relief' },
+      { id: 2, name: 'Digital Thermometer', price: 199, category: 'devices', mrp: 249, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop', note: 'Quick read' },
+      { id: 3, name: 'Vitamin C 1000mg', price: 249, category: 'wellness', mrp: 299, img: 'https://images.unsplash.com/photo-1584367369853-8b966cf2235f?q=80&w=1200&auto=format&fit=crop', note: 'Immunity support' },
+      { id: 4, name: 'Baby Diapers (M, 20pcs)', price: 399, category: 'baby', mrp: 450, img: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?q=80&w=1200&auto=format&fit=crop', note: 'Soft & dry' },
+      { id: 5, name: 'Hand Sanitizer 200ml', price: 99, category: 'wellness', mrp: 120, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop', note: 'Kills 99.9% germs' },
+      { id: 6, name: 'BP Monitor', price: 1499, category: 'devices', mrp: 1799, img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop', note: 'Automatic, cuff included' },
+    ];
+
+    const grid = document.getElementById('grid');
+    const empty = document.getElementById('empty');
+    const search = document.getElementById('search');
+    const category = document.getElementById('category');
+    const sort = document.getElementById('sort');
+
+    function waLink(product) {
+      const msg = encodeURIComponent(`Hi, I want to order: ${product.name} (₹${product.price}).`);
+      return `https://wa.me/91XXXXXXXXXX?text=${msg}`;
+    }
+
+    function render(list) {
+      grid.innerHTML = '';
+      if (!list.length) {
+        empty.classList.remove('hidden');
+        return;
+      }
+      empty.classList.add('hidden');
+      const tpl = document.getElementById('cardTpl');
+      list.forEach(p => {
+        const node = tpl.content.cloneNode(true);
+        const img = node.querySelector('img');
+        const name = node.querySelector('h3');
+        const note = node.querySelector('p');
+        const price = node.querySelector('span');
+        const btn = node.querySelector('a');
+        img.src = p.img;
+        img.alt = p.name;
+        name.textContent = p.name;
+        note.textContent = p.note || '';
+        price.textContent = `₹${p.price}`;
+        btn.href = waLink(p);
+        grid.appendChild(node);
+      });
+    }
+
+    function applyFilters() {
+      const q = search.value.trim().toLowerCase();
+      const cat = category.value;
+      let list = PRODUCTS.filter(p => (!q || p.name.toLowerCase().includes(q)) && (cat === 'all' || p.category === cat));
+      switch (sort.value) {
+        case 'price-asc': list = list.sort((a,b)=>a.price-b.price); break;
+        case 'price-desc': list = list.sort((a,b)=>b.price-a.price); break;
+        case 'name-asc': list = list.sort((a,b)=>a.name.localeCompare(b.name)); break;
+      }
+      render(list);
+    }
+
+    [search, category, sort].forEach(el => el.addEventListener('input', applyFilters));
+    render(PRODUCTS);
+
+    document.getElementById('menuBtn').addEventListener('click', ()=>{
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    })
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
